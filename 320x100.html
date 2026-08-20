@@ -23,15 +23,8 @@
 		box-sizing: border-box;
 	}
 
-	.mobon_reset {
-		position: relative;
-		width: var(--width);
-		height: var(--height);
-		font-family: "pretendard";
-		overflow: hidden;
-	}
-
-	#mobonLogo {
+	#mobonLogo,
+	.mobonLogo {
 		position: absolute;
 		top: 2px;
 		right: 2px;
@@ -44,7 +37,8 @@
 		cursor: pointer;
 	}
 
-	#mobonLogo:hover {
+	#mobonLogo:hover,
+	.mobonLogo:hover {
 		width: 73px;
 		height: 15px;
 		background: url('https://img.mobon.net/newAd/img/logoImg/mobonLogo_over02.png') center center;
@@ -52,6 +46,14 @@
 	}
 
 	/* 4. 해당 사이즈 배너 */
+	.mobon_reset {
+		position: relative;
+		width: var(--width);
+		height: var(--height);
+		font-family: "pretendard";
+		overflow: hidden;
+	}
+
 	.mobon_banner {
 		display: flex;
 		width: 100%;
