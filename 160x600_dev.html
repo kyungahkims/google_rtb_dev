@@ -22,7 +22,8 @@
 			box-sizing: border-box;
 		}
 
-		#mobonLogo {
+		#mobonLogo,
+		.mobonLogo {
 			position: absolute;
 			top: 2px;
 			right: 2px;
@@ -35,7 +36,8 @@
 			cursor: pointer;
 		}
 
-		#mobonLogo:hover {
+		#mobonLogo:hover,
+		.mobonLogo:hover {
 			width: 73px;
 			height: 15px;
 			background: url('https://img.mobon.net/newAd/img/logoImg/mobonLogo_over02.png') center center;
@@ -251,7 +253,7 @@
 			<!-- mobon_banner 1 -->
 			<div class="mobon_banner" onclick="window.open('{{purl1}}')">
 				<div class="img_wrap">
-					<img class="img product-img" src="{{img1}}" data-pcode="{{pcode1}}" alt="상품이미지">
+					<img class="img product-img" src="{{img1}}" data-pcode="{{pcode1}}" alt="{{pnm1}}">
 				</div>
 				<div class="info_wrap">
 					<p class="pnm">{{pnm1}}</p>
@@ -268,7 +270,7 @@
 			<!-- mobon_banner 2 -->
 			<div class="mobon_banner" onclick="window.open('{{purl2}}')">
 				<div class="img_wrap">
-					<img class="img product-img" src="{{img2}}" data-pcode="{{pcode2}}" alt="상품이미지">
+					<img class="img product-img" src="{{img2}}" data-pcode="{{pcode2}}" alt="{{pnm2}}">
 				</div>
 				<div class="info_wrap">
 					<p class="pnm">{{pnm2}}</p>
@@ -289,7 +291,7 @@
 
 	<!-- 대체 배너 영역 -->
 	<div class="fallback_banner" id="hiddenMobon">
-		<div id="mobonLogo" onclick="window.open('{{HTTP}}/ad/linfo.php')"></div>
+		<div class="mobonLogo" onclick="window.open('{{HTTP}}/ad/linfo.php')"></div>
 		<div class="fallback_link" onclick="window.open('https://mobon.net/bridge/')">
 			<img src="{{HTTP}}/servlet/image/mobon/160x600.png" alt="대체배너" />
 		</div>
