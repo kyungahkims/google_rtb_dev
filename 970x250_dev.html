@@ -211,74 +211,93 @@
 			left: 100%;
 		}
 	}
-</style>
+
+		/* 5. 대체 배너 */
+		.fallback_banner {
+			display: none;
+			position: relative;
+			width: var(--width);
+			height: var(--height);
+			overflow: hidden;
+		}
+
+		.fallback_link {
+			display: block;
+			width: 100%;
+			height: 100%;
+			cursor: pointer;
+		}
+
+		.fallback_banner img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	</style>
 
 <body>
-	<div class="mobon_reset">
+	<div class="mobon_reset" id="noHiddenMobon">
 		<div id="mobonLogo" onclick="window.open('{{HTTP}}/ad/linfo.php')"></div>
-		<div class="shop_logo"><img src="https://manage.mobon.net/ad/imgfile//20240125140913-H2Gm0AL5jB-logo.png" alt="로고">
+		<div class="shop_logo" onclick="window.open('{{purl1}}')">
+			<img src="{{logo}}" alt="로고" onerror="this.onerror=null; this.src='{{HTTP}}/rtb/images/mobon.jpg'">
 		</div>
 		<div class="mobon_banner_wrap">
 
 			<!-- mobon_banner 1 -->
-			<div class="mobon_banner">
-				<img class="img" src="https://www.dabagirl.co.kr/web/product/big/202105/04ff60dbb9fa51e3c47fc8e4bdc27c08.jpg"
-					alt="상품이미지">
+			<div class="mobon_banner" onclick="window.open('{{purl1}}')">
+				<img class="img" src="{{img1}}" data-pcode="{{pcode1}}" alt="{{pnm1}}">
 				<div class="bg">
-					<p class="pnm">쿨링 썸머 카라넥 원피스</p>
+					<p class="pnm">{{pnm1}}</p>
 					<!-- 할인 상품인 경우 .price_box에 .sale 추가 -->
-					<div class="price_box sale">
-						<div class="sale_rate">32<span>%</span></div>
-						<div class="sale_price">1,290,000<span>원</span></div>
-						<div class="original_price">1,890,000<span>원</span></div>
+					<div class="price_box {{box1}} sale">
+						<div class="sale_rate">{{discount1}}<span>%</span></div>
+						<div class="sale_price">{{price2_1}}</div>
+						<div class="original_price">{{price1}}</div>
 					</div>
 					<button type="button" class="shop_btn">최저가 구매</button>
 				</div>
 			</div>
 
 			<!-- mobon_banner 2 -->
-			<div class="mobon_banner">
-				<img class="img" src="https://www.dabagirl.co.kr/web/product/big/202105/04ff60dbb9fa51e3c47fc8e4bdc27c08.jpg"
-					alt="상품이미지">
+			<div class="mobon_banner" onclick="window.open('{{purl2}}')">
+				<img class="img" src="{{img2}}" data-pcode="{{pcode2}}" alt="{{pnm2}}">
 				<div class="bg">
-					<p class="pnm">린넨 배색 셔츠 원피스</p>
+					<p class="pnm">{{pnm2}}</p>
 					<!-- 할인 상품인 경우 .price_box에 .sale 추가 -->
-					<div class="price_box sale">
-						<div class="sale_rate">40<span>%</span></div>
-						<div class="sale_price">29,900<span>원</span></div>
-						<div class="original_price">49,900<span>원</span></div>
+					<div class="price_box {{box2}} sale">
+						<div class="sale_rate">{{discount2}}<span>%</span></div>
+						<div class="sale_price">{{price2_2}}</div>
+						<div class="original_price">{{price2}}</div>
 					</div>
 					<button type="button" class="shop_btn">최저가 구매</button>
 				</div>
 			</div>
 
 			<!-- mobon_banner 3 -->
-			<div class="mobon_banner">
-				<img class="img" src="https://www.dabagirl.co.kr/web/product/big/202105/04ff60dbb9fa51e3c47fc8e4bdc27c08.jpg"
-					alt="상품이미지">
+			<div class="mobon_banner" onclick="window.open('{{purl3}}')">
+				<img class="img" src="{{img3}}" data-pcode="{{pcode3}}" alt="{{pnm3}}">
 				<div class="bg">
-					<p class="pnm">코튼 벨티드 원피스</p>
+					<p class="pnm">{{pnm3}}</p>
 					<!-- 할인 상품인 경우 .price_box에 .sale 추가 -->
-					<div class="price_box sale">
-						<div class="sale_rate">25<span>%</span></div>
-						<div class="sale_price">149,000<span>원</span></div>
-						<div class="original_price">199,000<span>원</span></div>
+					<div class="price_box {{box3}} sale">
+						<div class="sale_rate">{{discount3}}<span>%</span></div>
+						<div class="sale_price">{{price2_3}}</div>
+						<div class="original_price">{{price3}}</div>
 					</div>
 					<button type="button" class="shop_btn">최저가 구매</button>
 				</div>
 			</div>
 
 			<!-- mobon_banner 4 -->
-			<div class="mobon_banner">
-				<img class="img" src="https://www.dabagirl.co.kr/web/product/big/202105/04ff60dbb9fa51e3c47fc8e4bdc27c08.jpg"
-					alt="상품이미지">
+			<div class="mobon_banner" onclick="window.open('{{purl4}}')">
+				<img class="img" src="{{img4}}" data-pcode="{{pcode4}}" alt="{{pnm4}}">
 				<div class="bg">
-					<p class="pnm">모던 슬리브리스 원피스</p>
+					<p class="pnm">{{pnm4}}</p>
 					<!-- 할인 상품인 경우 .price_box에 .sale 추가 -->
-					<div class="price_box sale">
-						<div class="sale_rate">30<span>%</span></div>
-						<div class="sale_price">34,900<span>원</span></div>
-						<div class="original_price">49,900<span>원</span></div>
+					<div class="price_box {{box4}} sale">
+						<div class="sale_rate">{{discount4}}<span>%</span></div>
+						<div class="sale_price">{{price2_4}}</div>
+						<div class="original_price">{{price4}}</div>
 					</div>
 					<button type="button" class="shop_btn">최저가 구매</button>
 				</div>
@@ -286,6 +305,51 @@
 
 		</div>
 	</div>
+	<!-- 노출 추적 태그 -->
+	{{wp_imgtag}}
+
+	<!-- 대체 배너 영역 -->
+	<div class="fallback_banner" id="hiddenMobon">
+		<div class="mobonLogo" onclick="window.open('{{HTTP}}/ad/linfo.php')"></div>
+		<div class="fallback_link" onclick="window.open('https://mobon.net/bridge/')">
+			<img src="{{HTTP}}/servlet/image/mobon/970x250.png" alt="대체배너" />
+		</div>
+	</div>
+
+	<!--  이미지 에러 감지 -->
+	<script>
+		(() => {
+			const mainBanner = document.getElementById('noHiddenMobon');
+			const fallbackBanner = document.getElementById('hiddenMobon');
+			const images = document.querySelectorAll('.img');
+
+			let isFallbackTriggered = false;
+
+			const handleImageError = (event) => {
+				if (isFallbackTriggered) return;
+				isFallbackTriggered = true;
+
+				const pcode = event.target.dataset.pcode || '';
+
+				if (mainBanner) mainBanner.style.display = 'none';
+				if (fallbackBanner) fallbackBanner.style.display = 'block';
+
+				const errorUrl =
+					`{{HTTP_DR}}/rtbShop?uid=${encodeURIComponent("{{UUID}}")}&u={{USER}}&pc=${pcode}&itlTpCode={{ITL_TP_CODE}}`;
+				(new Image()).src = errorUrl;
+			};
+
+			images.forEach(img => {
+				if (img.complete && img.naturalHeight === 0) {
+					handleImageError({
+						target: img
+					});
+				} else {
+					img.addEventListener('error', handleImageError);
+				}
+			});
+		})();
+	</script>
 </body>
 
 </html>
